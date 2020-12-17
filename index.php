@@ -33,7 +33,7 @@
                     $posty = $wiersz["id"];
                     $result2 = $conn->query("SELECT tag.tag FROM `post_tag`, post, tag WHERE post_tag.id_post = post.id AND post_tag.id_tag = tag.id AND post_tag.id_post = $posty");
                 while($wiersz2 = $result2->fetch_assoc()){
-                    echo("<tr><b><a href='?akcja=".$wiersz2['tag']."'>".$wiersz2['tag']."</a></b></tr> ");
+                    echo("<tr><b><a href='?akcja=".$wiersz2['tag']."'>".$wiersz2['tag']."</a></b></tr>, ");
                 } 
                 echo("</div>");
                 echo("<div class='main'>");
